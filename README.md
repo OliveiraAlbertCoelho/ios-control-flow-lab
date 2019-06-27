@@ -28,10 +28,10 @@ if conditionTwo {
 print("D")
 ```
 
-- A
+- A --->X
 - B
-- C
-- D
+- C---->X
+- D---->X
 
 ***
 ## Question 2
@@ -50,7 +50,7 @@ switch appInfo {
 }
 ```
 
-- appInfo.0 hasn't released yet
+- appInfo.0 hasn't released yet---->X 
 - myCoolApp hasn't released yet
 - Thanks for looking at myCoolApp!
 - I'm not quite sure what you are looking at
@@ -78,7 +78,7 @@ default:
 - A
 - B
 - C
-- D
+- D----->X
 
 ***
 ## Question 4
@@ -100,7 +100,7 @@ case "snickers":
 
 - No parentheses around the conditions
 - No opening and closing brackets in each of the cases
-- No default case in the switch statement
+- No default case in the switch statement----->X ONLY  ERROR
 - No print statement right outside the switch statement
 
 ***
@@ -109,9 +109,17 @@ case "snickers":
 Given the current weather conditions (rain, sunny, snow), use a switch statement to print an appropriate message to the user
 
 ```swift
-let currentWeather = "rain"
+let currentWeather = "snow"
+switch currentWeather {
+case "rain":
+print("don't forget a umbrella")
 
-// enter code below
+case "snow":
+print("Its very cold outside")
+default:
+print("its crazy hot")
+}
+
 ```
 
 ***
@@ -122,8 +130,9 @@ Given the first name and last name of a Fellow, declare `fullName` variable and 
 ```swift
 let firstName = "John"
 let lastName = "Appleseed"
+var fullName = "\(firstName) \(lastName)"
+print (fullName)
 
-// enter code below
 ```
 
 ***
